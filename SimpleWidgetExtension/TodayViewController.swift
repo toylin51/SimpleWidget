@@ -53,10 +53,8 @@ class TodayViewController: DataViewController, NCWidgetProviding, UITableViewDel
     
     func widgetActiveDisplayModeDidChange(_ activeDisplayMode: NCWidgetDisplayMode, withMaximumSize maxSize: CGSize){
         if (activeDisplayMode == NCWidgetDisplayMode.compact) {
-            tableView.reloadData()
             self.preferredContentSize = maxSize
         }else {
-            tableView.reloadData()
             self.preferredContentSize = CGSize(width: 0, height: 44*array.count)
         }
     }
